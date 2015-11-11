@@ -1,0 +1,34 @@
+{
+  "name": "taw_visualizations_demo",
+  "version": "0.1.0",
+  "description": "Small demonstration visualizations for the Transforming the Afro-Caribbean World project using D3",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trevor Muñoz <tmunoz@umd.edu>",
+  "license": "MIT",
+  "homepage": "http://mith.us/taw_workshop/",
+  "dependencies": {
+    "bootstrap": "https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.tar.gz",
+    "d3": "^3.5.7",
+    "es6-promise": "^3.0.2",
+    "topojson": "^1.6.19",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-size": "^2.0.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "run-sequence": "^1.1.4"
+  }
+}
