@@ -1,0 +1,11 @@
+{
+  "eqeqeq": true,
+  "undef": true,
+  "browser": true,
+  "globals": {
+    "d3": true,
+    "Promise": true,
+    "_": true,
+    "topojson": true
+  }
+}
