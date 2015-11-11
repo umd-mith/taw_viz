@@ -1,0 +1,52 @@
+// Core variables and mixins
+@import 'theme_variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// // Reset and dependencies
+@import '../../node_modules/bootstrap/scss/normalize';
+@import '../../node_modules/bootstrap/scss/print';
+
+// Core CSS
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/grid';
+
+// Utility classes
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/utilities-spacing';
+@import '../../node_modules/bootstrap/scss/utilities-responsive';
+
+body:before {
+  content: none;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.country {
+  fill: $land-inactive;
+  stroke: $stardust-gray;
+  stroke-width: .5;
+}
+
+main {
+  @include make-container();
+}
+
+// .place-label {
+//   visibility: hidden;
+//
+//   &:hover,
+//   &:active {
+//     visibility: visible;
+//   }
+// }
+
+svg {
+  background-color: $water;
+  min-height: 750px;
+  min-width: 1200px;
+}
