@@ -10,20 +10,95 @@
 @import '../../node_modules/bootstrap/scss/reboot';
 @import '../../node_modules/bootstrap/scss/type';
 @import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/buttons';
+
+// Components
+@import '../../node_modules/bootstrap/scss/alert';
 
 // Utility classes
 @import '../../node_modules/bootstrap/scss/utilities';
 @import '../../node_modules/bootstrap/scss/utilities-spacing';
 @import '../../node_modules/bootstrap/scss/utilities-responsive';
 
+.arc {
+  fill: none;
+  stroke: $gray-dark;
+  stroke-linecap: round;
+  stroke-width: 1px;
+}
+
+.arrow {
+  border-top: .1em solid $gray-dark;
+  display: block;
+  height: 4rem;
+  top: 1rem;
+  width: 4rem;
+}
+
+.axis {
+  path {
+    fill: none;
+    shape-rendering: crispEdges;
+    stroke: $gray-dark;
+    stroke-width: 1px;
+  }
+
+  .tick {
+    line {
+      fill: none;
+      shape-rendering: crispEdges;
+      stroke: $gray-dark;
+      stroke-width: 1px;
+    }
+
+    text {
+      font-size: .707em;
+    }
+  }
+}
+
 body:before {
   content: none;
 }
 
 body {
+  align-items: center;
   display: flex;
   flex-flow: column;
+  justify-content: center;
   min-height: 100vh;
+}
+
+.bubbles {
+  align-self: flex-start;
+}
+
+.bubble-label {
+  fill: $gray-dark;
+  font-weight: bold;
+}
+
+.bubbles-caption {
+  font-size: .707em;
+}
+
+button {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart-line {
+  fill: none;
+  stroke: $brand-primary;
+  stroke-width: 1px;
+}
+
+.component {
+  @include center-block();
 }
 
 .country {
@@ -32,21 +107,150 @@ body {
   stroke-width: .5;
 }
 
+dl {
+  dt {
+    border-top: $gray-dark 1px solid;
+  }
+
+  dd {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+
+.graph-marker {
+  fill: none;
+  stroke: $stardust-gray;
+  stroke-width: 1px;
+}
+
+.graph-point {
+  fill: $gray-lightest;
+  stroke: $brand-primary;
+  stroke-width: 1px;
+}
+
+h3 {
+  margin: auto;
+}
+
 main {
   @include make-container();
 }
 
-// .place-label {
-//   visibility: hidden;
-//
-//   &:hover,
-//   &:active {
-//     visibility: visible;
-//   }
-// }
-
-svg {
+.map {
   background-color: $water;
-  min-height: 750px;
-  min-width: 1200px;
+  min-height: 570px;
+  min-width: 960px;
+}
+
+.map-control {
+  display: flex;
+  flex-flow: row;
+  padding-top: 1.999rem;
+
+  h1 {
+    font-size: $display2-size;
+    font-weight: $display2-weight;
+    margin: 0;
+    padding: 1.999rem;
+    padding-top: 0;
+  }
+}
+
+.message {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+}
+
+.next {
+  border-right: .1em solid $gray-dark;
+  transform: rotate(45deg);
+}
+
+.node {
+  circle {
+    fill: $cutty-sark;
+    fill-opacity: .25;
+    stroke: $gray-dark;
+    stroke-width: 1px;
+  }
+}
+
+.leaf {
+  circle {
+    fill: $ronchi;
+    fill-opacity: 1;
+  }
+}
+
+.no-match {
+  visibility: hidden;
+}
+
+.origin {
+  color: $gray-light;
+  display: block;
+  margin: auto;
+  padding-bottom: 1.414rem;
+}
+
+.place-label {
+  font-size: .707em;
+}
+
+.prev {
+  border-left: .1em solid $gray-dark;
+  transform: rotate(315deg);
+}
+
+section {
+  @include make-row();
+  align-items: center;
+  flex-flow: column;
+  padding-top: 3.998rem;
+  width: 80vw;
+
+  h2 {
+    align-self: flex-start;
+    padding-bottom: 1.414rem;
+  }
+}
+
+section:last-child {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-flow: row;
+  flex-wrap: wrap;
+
+  h2 {
+    flex-grow: 4;
+  }
+
+  svg:last-child {
+    align-self: flex-end;
+    padding: 1.414rem;
+  };
+}
+
+.selected-worker {
+  circle {
+    fill: $chicago;
+  }
+}
+
+.total {
+  display: block;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+  button {
+    @include center-block();
+  }
+}
+
+.worker-info {
+  padding-top: 3.998rem;
 }
