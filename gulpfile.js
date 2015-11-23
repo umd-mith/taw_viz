@@ -20,7 +20,7 @@ gulp.task('clean', function(callback) {
 
 gulp.task('copy', function(callback) {
   return gulp.src('./index.html')
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build:css', function() {
@@ -48,6 +48,7 @@ gulp.task('build:js', function() {
     'node_modules/topojson/topojson.js',
     'node_modules/es6-promise/dist/es6-promise.js',
     'node_modules/underscore/underscore.js',
+    'node_modules/handlebars/dist/handlebars.js',
     'src/js/**/*.js'])
     .pipe(concat('taw.js'))
     .pipe(uglify())

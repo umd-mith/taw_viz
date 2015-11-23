@@ -13,6 +13,7 @@
     "bootstrap": "https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.tar.gz",
     "d3": "^3.5.7",
     "es6-promise": "^3.0.2",
+    "handlebars": "^4.0.4",
     "topojson": "^1.6.19",
     "underscore": "^1.8.3"
   },
