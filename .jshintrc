@@ -2,10 +2,12 @@
   "eqeqeq": true,
   "undef": true,
   "browser": true,
+  "node": true,
   "globals": {
     "d3": true,
     "Promise": true,
     "_": true,
-    "topojson": true
+    "topojson": true,
+    "Handlebars": true
   }
 }
