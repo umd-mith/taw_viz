@@ -9,6 +9,7 @@
 // Core CSS
 @import '../../node_modules/bootstrap/scss/reboot';
 @import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/code';
 @import '../../node_modules/bootstrap/scss/grid';
 @import '../../node_modules/bootstrap/scss/buttons';
 
@@ -119,6 +120,22 @@ dl {
   }
 }
 
+footer {
+  background-color: $gray-dark;
+  width: 100vw;
+
+  p {
+    @include pull-right();
+    color: $gray-lightest;
+    margin: 1.414rem;
+    margin-left: 2.827rem;
+
+    a {
+      color: lighten($link-color, 15%);
+    }
+  }
+}
+
 .graph-marker {
   fill: none;
   stroke: $stardust-gray;
@@ -131,8 +148,21 @@ dl {
   stroke-width: 1px;
 }
 
+h1 {
+  padding-bottom: 2.827rem;
+}
+
 h3 {
   margin: auto;
+}
+
+.head-text {
+  p {
+    align-self: flex-start;
+    // margin: auto;
+    max-width: 38rem;
+    padding-top: 1rem;
+  }
 }
 
 main {
@@ -214,11 +244,10 @@ section {
 
   h2 {
     align-self: flex-start;
-    padding-bottom: 1.414rem;
   }
 }
 
-section:last-child {
+#charts {
   align-items: flex-start;
   display: flex;
   flex: 1;
@@ -241,6 +270,23 @@ section:last-child {
   }
 }
 
+.text-section {
+  p {
+    align-self: flex-start;
+    // margin: auto;
+    max-width: 38rem;
+    padding-top: 1rem;
+  }
+
+  p:first-of-type {
+    padding-top: 1.414rem;
+  }
+
+  p:last-of-type {
+    padding-bottom: 1.414rem;
+  }
+}
+
 .total {
   display: block;
   padding-bottom: 1rem;
@@ -251,6 +297,16 @@ section:last-child {
   }
 }
 
+ul {
+  align-self: flex-start;
+  margin: 0;
+}
+
 .worker-info {
+  min-width: 19rem;
   padding-top: 3.998rem;
+}
+
+.worker-info-container {
+  width: 19rem;
 }

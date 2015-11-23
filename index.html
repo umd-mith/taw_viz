@@ -11,9 +11,31 @@
   </head>
   <body>
     <main>
-      <h1>Visualizing TAW</h1>
+      <section id="intro" class="text-section">
+        <h1>Transforming the Afro-Caribbean World: Visualized</h1>
+        <div class="alert alert-warning" role="alert">
+          <strong>Warning!</strong> This page is only intended to demonstrate ways that data visualization could contribute to the study of historical labor migration. The subset of data visualized here is only partially processed or normalized and is moreover so small that no historical analysis is seriously intended.
+        </div>
+        <p>As part of the <a href="http://mith.umd.edu/research/project/transforming-the-afro-caribbean-world/">Transforming the Afro-Caribbean World (TAW) project</a>, team members identified, photographed, and transcribed a selection of records from the U.S. National Archives and Records Administration (NARA) relevant to historical research on labor migration to the Panama Canal region between 1880 and 1918.</p>
+
+        <p>The project's graduate research assistants transcribed these records, chiefly applications for "Photo Metal Checks," into spreadsheets &mdash; versions of which power the visualizations below. The values of several key fields, such as place of birth and, to a lesser extent, occupation were normalized using Open Refine.
+        </p>
+
+        <p>Based on this exploratory work, two approaches to visualizing this data suggest themselves: 1) <a href="#maps">geospatial</a>; and 2) <a href="#charts">categorical/hierarchical</a>. Below, an example of each of these visualization strategies forms the context for a short discussion of what the current state of the data will allow as well as possibilities for future work.</p>
+      </section>
       <section id="maps">
-        <h2>Seeing Movement</h2>
+        <section class="text-section">
+          <h2>Seeing Movement</h2>
+          <p>The records used in this project contain several different types of geospatial information &mdash; explicit and implied &mdash; that can be used to visualize the movement of workers through space and time. Examples include but are not limited to:
+          </p>
+          <ul>
+            <li>country/territory of birth</li>
+            <li>date of arrival on the isthmus</li>
+            <li>local isthmian address upon migration</li>
+            <li>location of employment</li>
+          </ul>
+          <p>In it's current state, the data supports visualizing only the grossest of these geospatial and temporal relationships describing the migration of workers. Almost all of the transcribed records contain information about country of birth. The granularity of dates of arrival varies across this set: some records have full day, month, and year information, some only month and year, or year. Thus, taking country of birth as a stand-in for the beginning of a worker's journey (a vastly simplifying assumption), it becomes possible to visualize variations in origin of workers migrating to the canal zone between 1880 and 1918.</p>
+        </section>
         <div class="viz"></div>
         <div class="map-control">
           <a href="#"><span class="arrow prev"></span></a>
@@ -23,23 +45,34 @@
         <div class="total">
           <button class="btn">Show Totals</button>
         </div>
+        <section class="text-section">
+          <p>Given further work to acquire historic maps of the canal zone during the period of construction and to geolocate (provide latitude and longitude coordinates) places within the canal zone that are currently referred to in the dataset only by name, it might be possible to map workers' journies within the ambit of the canal project and not just from another country of origin to the canal zone.</p>
+        </section>
       </section>
+      <hr>
       <section id="charts">
-        <h2>Seeing Workers</h2>
+        <section class="text-section">
+          <h2>Seeing Workers</h2>
+          <!-- <div class="head-text"> -->
+            <p>Workers' records capture information about a number of other attributes (skin color, at least as interpreted by canal officials; job category; literacy; marital status; etc.). Using categorical/hierarchical approaches it is also possible to begin to visualize the distribution of workers with various attributes.</p>
+          <!-- </div> -->
+        </section>
         <div class="chart-container">
-          <div>
-            <div class="head-text">
-              <p>It's also possible to visualize several dimensions of the personal data about individual workers.</p>
-            </div>
-            <div class="worker-info-container"></div>
-          </div>
+          <div class="worker-info-container"></div>
           <div class="viz"></div>
           <div class="total">
             <button class="btn">Show All</button>
           </div>
         </div>
+        <section class="text-section">
+          <p>Some of the most interesting of these attributes such as occupation have been only lightly normalized. Further work categorizing these elements of the data might produce new and more interesting groupings.</p>
+          <p>This type of visualization might be combined &mdash; as a rich browsing interface &mdash; with the full text of documents such as the essays written by former canal workers collected by the TAW project to provide even more rich detail about these historical people.</p>
+        </section>
       </section>
     </main>
+    <footer>
+      <p>Visualizations created for the TAW project by Trevor Muñoz. Source code on <a href="https://github.com/umd-mith/taw_viz">Github</a></p>
+    </footer>
 
     <!-- Scripts -->
     <script id="worker-template" type="text/x-handlebars-template">
