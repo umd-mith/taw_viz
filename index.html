@@ -40,6 +40,21 @@
     </main>
 
     <!-- Scripts -->
+    <script id="worker-template" type="text/x-handlebars-template">
+      <div class="worker-info" id="w{{ id }}">
+        <h3>{{ name }}</h3>
+        <span class="origin">{{ origin_label }}</span>
+        <dl>
+          <dt>Occupation: </dt><dd>{{ occupation }} <button class="btn btn-small btn-secondary-outline" data-key="occupation">see others</button></dd>
+          <dt>Color: </dt><dd>{{ color }} <button class="btn btn-small btn-secondary-outline" data-key="color">see others</button></dd>
+          <dt>Year of arrival: </dt><dd>{{ year_of_arrival }}</dd>
+          <dt>Isthmian address: </dt><dd>{{ address }}</dd>
+          <dt>Literate: </dt><dd>{{ literacy }} <button class="btn btn-small btn-secondary-outline" data-key="literacy">see others</button></dd>
+          <dt>Marital status: </dt><dd>{{ marital_status }} <button class="btn btn-small btn-secondary-outline" data-key="marital_status">see others</button></dd>
+        </dl>
+      </div>
+    </script>
+
     <script src="/js/taw.min.js"></script>
   </body>
 </html>
