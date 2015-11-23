@@ -554,8 +554,8 @@
         country.children.push({
           name: d.key,
           country: true,
-          size: d.value.length
-          // size: TAW.countsByCountry.get(d.key)
+          //size: d.value.length
+          size: TAW.countsByCountry.get(d.key)
         });
         return country;
       });
